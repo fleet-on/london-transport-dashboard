@@ -1,1 +1,0 @@
-Here are the tfl api's see if you can get the live data or the static data and make it look like live data coordinates are being used to move the bus on the map from current bus stop to the new bus stop which shoul happen on the "Live vehicle tracking active" update
