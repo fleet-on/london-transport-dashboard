@@ -15,7 +15,7 @@ import LiveVehicles from './components/LiveVehicles';
 
 const client = new ApolloClient({
   link: new HttpLink({
-    uri: 'http://localhost:4001/graphql',
+    uri: 'https://justinw.uk/tfl-api/graphql',
   }),
   cache: new InMemoryCache(),
 });

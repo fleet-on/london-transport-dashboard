@@ -60,7 +60,7 @@ export default function VehicleMapModal({ vehicle, onClose, onCenterCoordinates 
     const fetchDestinationCoords = async () => {
       if (!destinationName) return;
       try {
-        const res = await fetch(`http://localhost:4001/api/journey/coords?stopName=${encodeURIComponent(destinationName)}`);
+        const res = await fetch(`https://justinw.uk/tfl-api/api/journey/coords?stopName=${encodeURIComponent(destinationName)}`);
         if (!res.ok) {
           console.warn('destination coords fetch failed', await res.text());
           return;
@@ -152,7 +152,7 @@ export default function VehicleMapModal({ vehicle, onClose, onCenterCoordinates 
   const handleViewOnMap = async () => {
     if (!currentStopName) return;
     try {
-      const res = await fetch(`http://localhost:4001/api/journey/coords?stopName=${encodeURIComponent(currentStopName)}`);
+      const res = await fetch(`https://justinw.uk/tfl-api/api/journey/coords?stopName=${encodeURIComponent(currentStopName)}`);
       if (!res.ok) {
         console.warn('coords fetch failed', await res.text());
         return;
